@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gdc.easyorder.GetListProdController">
+   <children>
+      <BorderPane layoutX="60.0" layoutY="60.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="410.0" prefWidth="265.0" spacing="15.0" styleClass="myforContainer" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Veuillez choisir une option:" />
+                  <ComboBox fx:id="typeDeRecherche" prefHeight="25.0" prefWidth="275.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro du Commande :" />
+                  <ComboBox fx:id="numCmdCombo" prefHeight="25.0" prefWidth="275.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro du Client :" />
+                  <ComboBox fx:id="numClientCombo" prefHeight="25.0" prefWidth="271.0" />
+                  <HBox alignment="BASELINE_CENTER" prefHeight="23.0" prefWidth="245.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#searchListProd" text="Rechercher" />
+                        <Button fx:id="clearFieldsBtn" mnemonicParsing="false" onAction="#clearFields" text="Vider" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <top>
+            <Label styleClass="myTitle" text="Listes des produits" textAlignment="CENTER" textFill="#bc1717" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Bold Italic" size="28.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <HBox alignment="CENTER" prefHeight="513.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableProd" fixedCellSize="0.0" maxWidth="1.7976931348623157E308" prefHeight="509.0" prefWidth="716.0" styleClass="jfx-table-view">
+                     <columns>
+                        <TableColumn fx:id="idProdC" prefWidth="115.99999749660492" text="ID" />
+                        <TableColumn fx:id="NomProdC" prefWidth="242.0000228881836" text="Nom Produit" />
+                        <TableColumn fx:id="quantiteProdC" minWidth="0.0" prefWidth="156.66671752929688" text="Quantité" />
+                        <TableColumn fx:id="PrixProdC" minWidth="0.0" prefWidth="180.66668701171875" text="Prix" />
+                     </columns>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="15.0" />
+   </padding>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gdc.easyorder.FactureController">
+   <children>
+      <BorderPane layoutX="30.0" layoutY="30.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="410.0" prefWidth="265.0" spacing="15.0" styleClass="myforContainer" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" />
+                  <DatePicker fx:id="dateFac" prefHeight="25.0" prefWidth="291.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro de la Commande :" />
+                  <ComboBox fx:id="numComFac" prefHeight="25.0" prefWidth="275.0" />
+                  <HBox alignment="BASELINE_CENTER" prefHeight="23.0" prefWidth="245.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="addFacBtn" mnemonicParsing="false" onAction="#addFac" text="Ajouter" />
+                        <Button fx:id="editFacBtn" mnemonicParsing="false" onAction="#editFac" text="Modifier" />
+                        <Button fx:id="deleteFacBtn" mnemonicParsing="false" onAction="#deleteFac" text="Supprimer" />
+                        <Button fx:id="clearFieldsBtn" mnemonicParsing="false" onAction="#clearFields" text="Vider" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="4.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <top>
+            <Label styleClass="myTitle" text="Gestion des factures" textAlignment="CENTER" textFill="#bc1717" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Bold Italic" size="28.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </padding>
+               <BorderPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <HBox alignment="CENTER" prefHeight="513.0" prefWidth="571.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableFac" fixedCellSize="0.0" maxWidth="1.7976931348623157E308" onMouseClicked="#getData" prefHeight="509.0" prefWidth="716.0" styleClass="jfx-table-view">
+                     <columns>
+                        <TableColumn fx:id="idFacC" prefWidth="152.6666921377182" text="ID" />
+                        <TableColumn fx:id="dateFacC" prefWidth="169.33335876464844" text="Date de la facture" />
+                        <TableColumn fx:id="montantFacC" minWidth="0.0" prefWidth="194.00003051757812" text="Montant" />
+                        <TableColumn fx:id="numCmdFactC" minWidth="0.0" prefWidth="174.0" text="Numéro de la Commande" />
+                     </columns>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="15.0" />
+   </padding>
+</AnchorPane>

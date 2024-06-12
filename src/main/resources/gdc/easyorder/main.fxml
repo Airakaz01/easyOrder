@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gdc.easyorder.MainController">
+   <children>
+      <BorderPane fx:id="mainPane" layoutX="53.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D5DEEF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="138.0" layoutY="20.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #002B49;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/mainlogo (2).png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <HBox prefHeight="40.0" prefWidth="1020.0" styleClass="myTopMenu" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <JFXButton fx:id="homeBtn1" onAction="#showHome" prefHeight="45.0" prefWidth="145.0" text="Home">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/home1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="clientBtn1" onAction="#showClient" prefHeight="45.0" prefWidth="145.0" text="Clients">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="produitBtn1" onAction="#showProduit" prefHeight="45.0" prefWidth="145.0" text="Produits">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/prod1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="cmdBtn1" onAction="#showCommande" prefHeight="45.0" prefWidth="145.0" text="Commandes">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/commande1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="factureBtn1" onAction="#showFacture" prefHeight="45.0" prefWidth="145.0" text="Factures">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/fac.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="livraisonBtn1" onAction="#showLivraison" prefHeight="45.0" prefWidth="145.0" text="Livraisons">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/liv1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <MenuButton fx:id="MenuButtonTop" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: WHITE;" text="Autres" textOverrun="CLIP">
+                           <items>
+                              <MenuItem fx:id="listCmdMenuI1" mnemonicParsing="false" onAction="#showlistCmd" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Liste des Commandes" />
+                              <MenuItem fx:id="listProdMenuI1" mnemonicParsing="false" onAction="#showListProd" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Liste des Produits commandés" />
+                              <MenuItem fx:id="listFacMenuI1" mnemonicParsing="false" onAction="#showListFac" style="-fx-text-fill: #044264 #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Liste des Factures" />
+                              <MenuItem fx:id="bonsLivMenuI1" mnemonicParsing="false" onAction="#showBonsLIv" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Bons de Livraisons" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/more1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuButton>
+                        <MenuButton fx:id="MenuButtonTop1" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: WHITE;" text="Paramètres" textOverrun="CLIP">
+                           <items>
+                              <MenuItem fx:id="editAdminMenuI" mnemonicParsing="false" onAction="#editAdmin" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Modifier le mot de passe" />
+                              <MenuItem fx:id="addAdminMenuI" mnemonicParsing="false" onAction="#addAdmin" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Ajouter un administrateur" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/setting.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+                  <Label fx:id="Menu" layoutX="7.0" layoutY="34.0" text="Menu" textFill="#b7b7b7">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/menu1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MenuBack" layoutX="7.0" layoutY="34.0" text="Menu" textFill="#b7b7b7">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/menu1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" prefHeight="25.0" prefWidth="1220.0" spacing="10.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="Reduce" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/reduire.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="Exit" fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/exit.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="362.0" prefWidth="200.0" style="-fx-background-color: #D5DEEF;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="22.0" prefHeight="625.0" prefWidth="200.0" style="-fx-background-color: #044264;" styleClass="myLeftMenu" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="homeBtn2" alignment="BASELINE_LEFT" onAction="#showHome" prefHeight="56.0" prefWidth="200.0" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/home.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="clientBtn2" alignment="BASELINE_LEFT" onAction="#showClient" prefHeight="56.0" prefWidth="200.0" text="Clients" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/user1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="produitBtn2" alignment="BASELINE_LEFT" onAction="#showProduit" prefHeight="56.0" prefWidth="200.0" text="Produits" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/prod.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="cmdBtn2" alignment="BASELINE_LEFT" onAction="#showCommande" prefHeight="56.0" prefWidth="200.0" text="Commandes" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/commande.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="factureBtn2" alignment="BASELINE_LEFT" onAction="#showFacture" prefHeight="56.0" prefWidth="200.0" text="Factures" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/fac1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="livraisonBtn2" alignment="BASELINE_LEFT" onAction="#showLivraison" prefHeight="56.0" prefWidth="200.0" text="Livraisons" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/liv.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <MenuButton fx:id="MenuButtonLeft" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: #044264; -fx-font-weight: bold; -fx-font-size: 15;" text="Autres" textFill="WHITE" textOverrun="CLIP">
+                          <items>
+                            <MenuItem fx:id="listCmdMenuI2" mnemonicParsing="false" onAction="#showlistCmd" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Liste des Commandes" />
+                              <MenuItem fx:id="listProdMenuI2" mnemonicParsing="false" onAction="#showListProd" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Liste des Produits commandés" />
+                              <MenuItem fx:id="listFacMenuI2" mnemonicParsing="false" onAction="#showListFac" style="-fx-text-fill: #044264 #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Liste des Factures" />
+                              <MenuItem fx:id="bonsLivMenuI2" mnemonicParsing="false" onAction="#showBonsLIv" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Bons de Livraisons" />
+                          </items>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/more.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuButton>
+                        <MenuButton fx:id="MenuButtonLeft1" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="56.0" prefWidth="200.0" style="-fx-background-color: #044264; -fx-font-weight: bold; -fx-font-size: 15;" text="Paramètres" textFill="WHITE" textOverrun="CLIP">
+                           <items>
+                              <MenuItem fx:id="EditAdminMenuI1" mnemonicParsing="false" onAction="#editAdmin" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Modifer le mot de passe" />
+                              <MenuItem fx:id="AddAdminMenuI1" mnemonicParsing="false" onAction="#addAdmin" style="-fx-text-fill: #044264; -fx-border: none; -fx-padding: 0; -fx-margin: 0; -fx-width: 100%; -fx-min-width: 300;" text="Ajouter un administrateur" />
+                           </items>
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/settings1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="center" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #D5DEEF;" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <Pane prefHeight="25.0" prefWidth="1005.0" style="-fx-background-color: #044264;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="BOTTOM_CENTER" layoutX="200.0" prefHeight="17.0" prefWidth="1020.0" text="ⓒ 2024, EeasyOrdre, Tous droits réservés" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

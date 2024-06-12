@@ -1,0 +1,235 @@
+.primary-bg{
+    -fx-background-color:#044264;
+}
+.box {
+    /*-fx-background-color:linear-gradient(to right,#395886,#628ECB);*/
+    -fx-background-color:linear-gradient(to right,#395886,#628ECB);
+    -fx-background-radius:10px;
+}
+.box Label{
+-fx-font-size: 1.5em;
+}
+/* -----------------  lOGIN -----------------------*/
+.logo_container{
+    -fx-background-color: #044264;
+}
+.login_container Text{
+    -fx-font-size:2em;
+}
+.login_container FontAwesomeIconView{
+    -fx-text-fill: #ECF39E;
+}
+.login_form_container{
+    -fx-spacing:15px;
+    -fx-alignment:top-left;
+}
+.login_form_container Label{
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+.input_field{
+    -fx-background-color:white;
+    -fx-pref-height: 35px;
+    -fx-font-size:1.2em;
+}
+.login_form_container Button{
+    -fx-background-color: #044264;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight:bold;
+    -fx-pref-width:350px;
+    -fx-pref-height: 30px;
+    -fx-font-size:1.2em;
+}
+.login_form_container Button:hover{
+    -fx-cursor: hand;
+}
+
+
+/*----------------------Menu---------------------------------------*/
+.myLeftMenu JFXButton:hover, #MenuButtonLeft:hover ,#MenuButtonLeft1:hover{
+    -fx-background-color:#0C6184;
+    -fx-border-width: 0px 0px 0px 1.5px; /* top, right, bottom, left */
+    -fx-border-color: red;
+    -fx-cursor: hand;
+}
+.myTopMenu JFXButton:hover ,#MenuButtonTop:hover,#MenuButtonTop1:hover{
+    -fx-background-color:#A5A5A5;
+    -fx-border-width: 0px 0px 2px 0px; /* top, right, bottom, left */
+    -fx-border-color: #571B73;
+    -fx-cursor: hand;
+}
+
+
+/*----------------------formulaire---------------------------------------*/
+.myforContainer{
+    -fx-background-color:white;/*#B1C9EF */
+    -fx-border: 1px;
+    -fx-border-color:black;
+    -fx-border-weight:solide;
+    -fx-padding:10px;
+    -fx-min-width:300px
+}
+.myforContainer Label,.myforContainer Text{
+    -fx-fill :#044264;
+    -fx-font-size:1.2em;
+    -fx-font-weight:bold;
+}
+.myforContainer Button{
+    -fx-background-color:#044264 /*-fx-outer-border, -fx-inner-border, -fx-body-color*/;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 3, 2, 2;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill:white /*-fx-button-text-color*/;
+    -fx-font-weight:bold;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 4,0,0,1 );
+}
+
+.myforContainer Button:hover{
+    -fx-background-color:#0C6184;
+    -fx-cursor: hand;
+}
+
+.myforContainer Button:pressed{
+    -fx-background-color:#A7A7A7;
+    -fx-text-fill: GREY;
+}
+
+.myforContainer Button:disabled{
+    -fx-opacity: 0.4px;
+    -fx-background-color: grey;
+    -fx-text-fill: black;
+}
+
+/*--------------------------Titre---------------------------------------*/
+.myTitle{
+ -fx-text-fill:#022B42;
+ -fx-font-size:2.5em;
+ -fx-font-weight:bold;
+}
+/*--------------------------Tableau---------------------------------------*/
+.jfx-table-view {
+    -fx-background-color: #0C6184;
+    -fx-min-width:600px;
+    /*-fx-text-color:black;*/
+}
+.jfx-table-view .column-header{
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-color:white;
+    -fx-fill: White;
+
+    -fx-background-color:#044264;
+    -fx-border-color: #0C6184;
+    -fx-border-width: 0.0;
+}
+.jfx-table-view .column-header Label{
+    -fx-text-fill:white;
+}
+.jfx-table-view .column-header:hover, .jfx-table-view .column-header:selected {
+    -fx-background-color: #0C6184;
+    -fx-text-fill:black;
+    -fx-cursor: hand;
+}
+
+.jfx-table-view .table-row-cell {
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-background-color: white;
+    -fx-text-color:black;
+}
+.jfx-table-view .table-row-cell:hover{
+    -fx-background-color: #E5F3FF;
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+    -fx-cursor: hand;
+}
+.jfx-table-view .table-row-cell:selected, .jfx-table-view .table-row-cell:pressed{
+    -fx-background-color:#E5F3FF;
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+}
+.jfx-table-view .table-view-focus-border {
+    -fx-border-color: #E5F3FF;
+    -fx-border-width: 1.0px;
+}
+/*-------------------------------------Tab2--------------------------------*/
+.jfx-table-view-2 {
+    -fx-background-color: #0C6184;
+    /*-fx-min-width:600px;
+    -fx-text-color:black;*/
+}
+.jfx-table-view-2 .column-header{
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-color:white;
+    -fx-fill: White;
+
+    -fx-background-color:#044264;
+    -fx-border-color: #0C6184;
+    -fx-border-width: 0.0;
+}
+.jfx-table-view-2 .column-header Label{
+    -fx-text-fill:white;
+}
+.jfx-table-view-2 .column-header:hover, .jfx-table-view-2 .column-header:selected {
+    -fx-background-color: #0C6184;
+    -fx-text-fill:black;
+    -fx-cursor: hand;
+}
+
+.jfx-table-view-2 .table-row-cell {
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-background-color: white;
+    -fx-text-color:black;
+}
+.jfx-table-view-2 .table-row-cell:hover{
+    -fx-background-color: #E5F3FF;
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+    -fx-cursor: hand;
+}
+.jfx-table-view-2 .table-row-cell:selected, .jfx-table-view-2 .table-row-cell:pressed{
+    -fx-background-color:#E5F3FF;
+    -fx-text-fill: black;
+    -fx-font-weight:bold;
+}
+.jfx-table-view-2 .table-view-focus-border {
+    -fx-border-color: #E5F3FF;
+    -fx-border-width: 1.0px;
+}
+/*______________________Dash2__________________________________*/
+.box {
+    -fx-background-color:linear-gradient(to right,#395886,#628ECB);
+    -fx-background-radius:10px;
+}
+.box Label{
+-fx-font-size:1.5em;
+}
+.round_box{
+    -fx-border-radius:100%;
+    -fx-background-radius:100%;
+    -fx-border-width:5px
+}
+.montantModifier{
+-fx-background-color:linear-gradient(to right,#395886,#628ECB);
+}
+.container{
+-fx-background-color: #D5DEEF
+}
+.button-like-text {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+    -fx-padding: 0;
+}
+
+.button-like-text:hover {
+    -fx-text-fill: red;
+}
+.labelM{
+    -fx-background-color: white;
+    -fx-border-color: #c0c0c0;
+    -fx-border-width: 1px;
+    -fx-padding: 4px;
+    -fx-pref-width: 200px;
+    -fx-pref-height: 25px;
+}
